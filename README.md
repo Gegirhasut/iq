@@ -64,10 +64,12 @@ sudo -u postgres psql -c "create database micro;"
 
 10. Запускаем очередь
 
-/home/vagrant/gui/iq
+cd /home/vagrant/gui/iq
 
 php artisan queue:listen
+
 11. Идем через браузер на http://gui.test
+
 12. Добавляем юзеров, совершаем с ними остальные операции
 
 ![Вот так это выглядит](https://raw.githubusercontent.com/Gegirhasut/iq/master/example.PNG)
