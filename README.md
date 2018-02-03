@@ -37,7 +37,7 @@ mkdir /home/vagrant/gui
 git init
 git clone -b master https://github.com/Gegirhasut/iq.git
 
-Внимание! В проект закомичен файл .env, поэтому больше никаких манипуляций делать не придется.
+**Внимание!** В проект закомичен файл .env, поэтому с ним никаких манипуляций делать не нужно.
 
 8. Устанавливаем зависимости:
 composer install
