@@ -50,3 +50,5 @@ sudo -u postgres psql -c "create database micro;"
 php artisan queue:listen
 11. Идем через браузер на http://gui.test
 12. Добавляем юзеров, совершаем с ними остальные операции
+
+![Вот так это выглядит](https://raw.githubusercontent.com/Gegirhasut/iq/master/example.PNG)
