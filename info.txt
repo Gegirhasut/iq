@@ -1,3 +1,7 @@
+git init
+git clone -b master https://github.com/Gegirhasut/iq.git
+composer install
+
 sudo -u postgres psql -c "create role micro with login password 'micro';"
 sudo -u postgres psql -c "alter role micro CREATEDB;"
 sudo -u postgres psql -c "create database micro;"
