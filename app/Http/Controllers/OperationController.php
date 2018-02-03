@@ -6,17 +6,24 @@ use App\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 use App\Jobs\ProcessTransaction;
+use Illuminate\Support\Facades\Validator;
 
 class OperationController extends Controller
 {
     /**
-     * Show the application dashboard.
+     * User balans operations: add/minus/hold/transfer
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function user(Request $request)
     {
-        if (!empty($request->amount) && !empty($request->u_id)) {
+        $validator = Validator::make($request->all(), [
+            'operation' => 'required|max:20|min:3',
+            'amount' => 'required|integer',
+            'u_id' => 'required|integer',
+        ]);
+
+        if (!$validator->fails()) {
             $transaction = new Transaction();
             $transaction->operation = $request->operation;
             $transaction->u_id = $request->u_id;
@@ -31,13 +38,19 @@ class OperationController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Hold operations: (approve/decline)
      *
      * @return \Illuminate\Http\Response
      */
     public function hold(Request $request)
     {
-        if (!empty($request->hold_id) && !empty($request->u_id)) {
+        $validator = Validator::make($request->all(), [
+            'operation' => 'required|max:20|min:3',
+            'hold_id' => 'required|integer',
+            'u_id' => 'required|integer',
+        ]);
+
+        if (!$validator->fails()) {
             $transaction = new Transaction();
             $transaction->operation = $request->operation;
             $transaction->hold_id = $request->hold_id;

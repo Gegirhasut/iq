@@ -15,6 +15,6 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('/add', 'HomeController@add')->name('add');
 
-Route::post('/operation', 'OperationController@index')->name('operation');
+Route::post('/operation', 'OperationController@user')->name('operation');
 
 Route::post('/operation/hold', 'OperationController@hold')->name('hold');

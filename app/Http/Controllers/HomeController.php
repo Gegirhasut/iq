@@ -23,6 +23,12 @@ class HomeController extends Controller
         return view('home', ['users' => $users, 'holds' => $holds]);
     }
 
+    /**
+     * Add new user
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function add(Request $request) {
         if ($request->name) {
             $user = new User();
