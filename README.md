@@ -25,19 +25,19 @@ https://laravel.com/docs/5.6/homestead#launching-the-vagrant-box
 
 2. Донастраиваем homestead.yaml на новый сайт, добавляя следующие директивы:
 
-folders:
+folders (**не обязательно**):
 
     - map: D:/wamp/vhosts/laravel/iqoption/gui
 
       to: /home/vagrant/gui
+
+В folders в map указываем вашу локальную папку где вы разрабатываете, на которую будет маппинг папки внутри виртуалки
 
 sites:
 
     - map: gui.test
 
       to: /home/vagrant/gui/iq/public
-
-**Не обязательно:** В folders в map указываем вашу локальную папку где вы разрабатываете, на которую будет маппинг папки внутри виртуалки
 
 3. Прописываем в файле hosts:
 
