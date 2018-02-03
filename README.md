@@ -44,6 +44,8 @@ mkdir /home/vagrant/gui
 
 7. Скачиваем проект с Github:
 
+cd /home/vagrant/gui
+
 git init
 
 git clone -b master https://github.com/Gegirhasut/iq.git
