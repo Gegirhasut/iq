@@ -19,7 +19,7 @@ class OperationController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'operation' => 'required|max:20|min:3',
-            'amount' => 'required|integer',
+            'amount' => 'required|numeric',
             'u_id' => 'required|integer',
         ]);
 
